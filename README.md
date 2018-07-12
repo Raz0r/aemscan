@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Raz0r/aemscan.svg?branch=master)](https://travis-ci.org/Raz0r/aemscan)
+
 ## aemscan
 #### *Adobe Experience Manager Vulnerability Scanner*
 
