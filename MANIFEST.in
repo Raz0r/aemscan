@@ -1,0 +1,2 @@
+recursive-include aemscan *
+recursive-exclude aemscan *.pyc

@@ -1,0 +1,18 @@
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>http://test.com/</id>
+  <updated>2016-07-15T16:27:00.135Z</updated>
+  <title type="html">test.com</title>
+  <link href="http://test.com/.feed" rel="self" />
+  <generator uri="http://www.day.com/cq5" version="6.0">Adobe Experience Manager</generator>
+  <entry>
+    <title type="html">English</title>
+    <link href="http://test.com/en.html" />
+    <author>
+      <email>noemail@noemail.org</email>
+      <name>john</name>
+    </author>
+    <id>http://test.com/en</id>
+    <published>2016-07-13T20:11:16.880Z</published>
+    <updated>2016-07-13T20:11:16.880Z</updated>
+  </entry>
+</feed>

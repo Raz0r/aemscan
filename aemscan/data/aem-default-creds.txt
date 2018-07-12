@@ -1,0 +1,6 @@
+admin:admin
+author:author
+anonymous:anonymous
+replication-receiver:replication-receiver
+jdoe@geometrixx.info:jdoe
+aparker@geometrixx.info:aparker
