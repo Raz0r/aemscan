@@ -3,3 +3,4 @@ build/
 .eggs/
 *.egg-info/
 *.pyc
+.idea/
