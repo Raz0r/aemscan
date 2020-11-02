@@ -14,7 +14,7 @@ setup(
     description='Adobe Experience Manager Vulnerability Scanner',
     install_requires=[
         'click==6.6',
-        'requests==2.10.0',
+        'requests==2.20.0',
     ],
     entry_points={
         'console_scripts': [
