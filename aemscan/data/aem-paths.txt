@@ -229,3 +229,4 @@
 /etc/mobile/useragent-test.html
 /etc/reports/diskusage.html
 /system/console?.css
+/etc/replication/agents.publish.html
