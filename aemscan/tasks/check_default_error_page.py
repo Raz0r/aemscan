@@ -15,7 +15,7 @@ def run(url):
 
 
 def parse_response(response):
-    match = re.search("<address>(.+?)</address>", response)
+    match = re.search("<address>(.+?)</address>", response.decode('utf-8'))
     if match:
         return match.group(1)
     return False

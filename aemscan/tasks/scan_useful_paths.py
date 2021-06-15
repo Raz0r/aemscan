@@ -8,7 +8,7 @@ import requests
 
 def run(url):
     with open(os.path.dirname(__file__) + '/../data/aem-paths.txt', 'r') as f:
-        paths = map(string.strip, f.readlines())
+        paths = list(map(str.strip, f.readlines()))
         found = []
         with click.progressbar(paths, label='Scanning useful paths') as bar:
             for path in bar:

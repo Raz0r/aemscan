@@ -1,7 +1,10 @@
 __author__ = 'raz0r'
 
 import click
-from urlparse import urlparse
+try:
+    from urlparse import urlparse
+except (ImportError, ModuleNotFoundError):
+    from urllib.parse import urlparse
 
 
 class URL(click.ParamType):
