@@ -15,7 +15,7 @@ def run(url):
 
     click.echo(click.style('AEM authentication is available', fg='green'))
     with open(os.path.dirname(__file__) + '/../data/aem-default-creds.txt', 'r') as f:
-        creds = map(string.strip, f.readlines())
+        creds = list(map(str.strip, f.readlines()))
         found = []
         with click.progressbar(creds, label='Checking default credentials') as bar:
             for line in bar:
