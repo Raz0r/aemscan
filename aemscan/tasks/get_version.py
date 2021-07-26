@@ -3,10 +3,12 @@ __author__ = 'raz0r'
 import click
 import requests
 import xml.etree.ElementTree as ET
+from requests.packages.urllib3.exceptions import InsecureRequestWarning
 
+requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 def run(url):
-    response = requests.get(url + '/.feed')
+    response = requests.get(url + '/.feed', verify=False)
     version = parse_response(response.content)
     if version:
         click.echo(click.style('AEM version: {}'.format(version), fg='green'))

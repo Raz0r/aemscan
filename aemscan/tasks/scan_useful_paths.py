@@ -4,7 +4,9 @@ import os
 import click
 import string
 import requests
+from requests.packages.urllib3.exceptions import InsecureRequestWarning
 
+requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 def run(url):
     with open(os.path.dirname(__file__) + '/../data/aem-paths.txt', 'r') as f:
@@ -12,7 +14,7 @@ def run(url):
         found = []
         with click.progressbar(paths, label='Scanning useful paths') as bar:
             for path in bar:
-                response = requests.head(url + path)
+                response = requests.head(url + path, verify=False)
                 if response.status_code == 200:
                     found.append(path)
     if found:

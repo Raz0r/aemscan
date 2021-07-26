@@ -4,10 +4,12 @@ import os
 import click
 import string
 import requests
+from requests.packages.urllib3.exceptions import InsecureRequestWarning
 
+requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 def run(url):
-    response = requests.get(url + '/', auth=('baseline', 'request'))
+    response = requests.get(url + '/', auth=('baseline', 'request'), verify=False)
     if response.status_code != 401:
 
         click.echo(click.style('AEM authentication is not available', fg='red'))
@@ -20,7 +22,7 @@ def run(url):
         with click.progressbar(creds, label='Checking default credentials') as bar:
             for line in bar:
                 (login, password) = line.split(':')
-                response = requests.post(url + '/', auth=(login, password))
+                response = requests.post(url + '/', auth=(login, password), verify=False)
                 if response.status_code == 200:
                     found.append(line)
     if found:
