@@ -1,5 +1,5 @@
 __author__ = 'raz0r'
-__version__ = '1.0'
+__version__ = '1.1'
 
 import click
 
